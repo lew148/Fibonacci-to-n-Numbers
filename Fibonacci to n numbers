@@ -1,11 +1,12 @@
 # User inputs n, which is the amount of fibonacci numbers that will be shown:
 n = int(input("How Many Fibonacci Sequence Numbers? "));
+list = [];
 
 # Negitivity and 0 check: 
-if (n < 0):
+if n < 0:
   print("Sorry. That's impossible!");
 
-elif (n == 0):
+elif n == 0:
   print("Why bother?");
   
 # The first two fibonacci numbers, as they are needed to start:
@@ -18,7 +19,12 @@ iteration = 0;
 while iteration < n:
 
 # Prints the generated number:
-  print(x);
+#  print(x); 
+
+# above and below can be interchaged, for different output formats
+
+# Adds the value to the list:
+  list.insert(iteration, x);
   
 # Previous two numbver are added together (Fibonacci Sequence) to create new variable:
   z = x + y;
@@ -26,6 +32,10 @@ while iteration < n:
 # x becomes the value of y and y becomes the value of z, to move dow the list:
   x = y;
   y = z;
-  
+   
 # Iteration count is increased by one, becoming closer to n, where the loop will end:
   iteration = iteration + 1;
+  
+# Prints list when finished (comment out if using 'print(x)' format):
+  if iteration == n:
+    print(list);
