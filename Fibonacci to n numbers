@@ -18,7 +18,7 @@ if c == "0":
 elif c == "1":
   x,y = 1,1;
 else:
-  print("Please try again...");
+  print("That's not '0' or '1'! Please try again...");
 
 # Amount of iterations. 0 by default:
 iteration = 0;
